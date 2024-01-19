@@ -182,7 +182,7 @@ namespace ezt {
 	String dayStr(const uint8_t month);
 	void deleteEvent(const uint8_t event_handle);
 	void deleteEvent(void (*function)());
-	ezError_t error(const bool reset = false);
+	ezError_t error(ezError_t err, const bool reset = false);
 	String errorString(const ezError_t err = LAST_ERROR);
 	void events();
 	time_t makeOrdinalTime(const uint8_t hour, const uint8_t minute, const uint8_t second, uint8_t ordinal, const uint8_t wday, const uint8_t month, uint16_t year);

@@ -135,7 +135,8 @@ namespace ezt {
 		}
 	}
 
-	ezError_t error(const bool reset /* = false */) {
+	ezError_t error(ezError_t err, const bool reset /* = false */) {
+		_last_error = err;
 		ezError_t tmp = _last_error;
 		if (reset) _last_error = NO_ERROR;
 		return tmp;
